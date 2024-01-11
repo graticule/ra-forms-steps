@@ -1,9 +1,9 @@
-export default function StepsTableRow() {
+export default function StepsTableRow({ date, distance, onDelete }: { date:string, distance:number, onDelete: () => void }) {
   return (
     <div className="table__row">
-      <div className="table__cell">1</div>
-      <div className="table__cell">2</div>
-      <div className="table__cell"><button className="button_delete"></button></div>
+      <div className="table__cell">{date}</div>
+      <div className="table__cell">{distance}</div>
+      <div className="table__cell"><button className="button_delete" onClick={onDelete}></button></div>
     </div>
   )
 }
